@@ -2,9 +2,9 @@
   <div class="question" *ngFor="let question of questions">
     <div class="card">
       <div class="card-header">
-        {{ question.text}}
+        {{ question.text}} <a href="#" class="btn btn-link" (click)="question.hide = !question.hide">Show</a>
       </div>
-      <div class="card-block">
+      <div class="card-block" [hidden]="question.hide">
         <p class="card-text">{{ question.answer}}</p>
       </div>
     </div>
