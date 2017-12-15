@@ -33,4 +33,12 @@ export class DataService {
    addQuestion(question:Question) {
     this.questions.unshift(question);
    }
+
+   removeQuestion(question:Question) {
+     //match question with button
+     for(let i = 0; i < this.questions.length; i++){
+      if(question == this.questions[i])
+        this.questions.splice(i,1);
+     }
+   }
 }
