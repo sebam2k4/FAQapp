@@ -26,7 +26,7 @@ export class DataService {
     ];
    }
 
-   getQuestion() {
+   getQuestions() {
      return this.questions;
    }
 }
