@@ -15,7 +15,7 @@ export class DataService {
     // Local Storage - needs to be saved in string (JSON.stringify) and 
     // when pulling out data need to convert back to an array (JSON.parse)
     if(localStorage.getItem('questions') === null){
-      //this.questions = [];
+      this.questions = [];
     } else {
       this.questions = JSON.parse(localStorage.getItem('questions'));
     }

@@ -10,13 +10,24 @@ import { Question } from '../../models/Question';
 })
 export class QuestionComponent implements OnInit {
   @Input('question') question:Question;
+  showHide:string;
 
   constructor(public dataService:DataService) { }
 
   ngOnInit() {
+    this.showHide = 'Show'
   }
 
   removeQuestion(question:Question) {
     this.dataService.removeQuestion(question)
+  }
+
+  hideShowAnswer(question:Question) {
+    this.question.hide = !this.question.hide;
+    if (question.hide === true) {
+      this.showHide = 'Show';
+    } else {
+      this.showHide = 'Hide';
+    }
   }
 }
