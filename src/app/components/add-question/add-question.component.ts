@@ -21,7 +21,9 @@ export class AddQuestionComponent implements OnInit {
   addQuestion() {
     this.questionAdded.emit({text:this.text,
                             answer:this.answer,
-                            hide:true})
-    
+                            hide:true});
+    // remove text from input after adding question/answer
+    this.text = '';
+    this.answer = '';
   }
 }
