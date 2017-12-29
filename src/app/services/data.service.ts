@@ -7,24 +7,7 @@ export class DataService {
   questions:Question[];
 
   constructor() {
-    /* will be using local storage instead
-    this.questions = [
-      {
-        text: 'What is your name?',
-        answer: 'My name is Sebastian',
-        hide: true
-      },
-      {
-        text: 'What is your favourite color?',
-        answer: 'My favourite color is blue',
-        hide: true
-      },
-      {
-        text: 'What is your favourite Coding language?',
-        answer: 'Javascript',
-        hide: true
-      }
-    ]; */
+
    }
 
    // get questions from local storage
@@ -32,7 +15,7 @@ export class DataService {
     // Local Storage - needs to be saved in string (JSON.stringify) and 
     // when pulling out data need to convert back to an array (JSON.parse)
     if(localStorage.getItem('questions') === null){
-      this.questions = [];
+      //this.questions = [];
     } else {
       this.questions = JSON.parse(localStorage.getItem('questions'));
     }
