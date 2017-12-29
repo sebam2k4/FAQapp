@@ -1,6 +1,8 @@
-# Faqapp
+# FAQapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+This is a simple app that allows the user to add and remove Frequently Asked Questions (FAQs). Once a question and answer is saved, they will appear in a new panel with the answer being hidden by default. The user can then toggle the visiblity of the answer by clicking on appropriate button.
+
+The app is using **Local Storage** to save the user data locally within the browser. This means the data will persist when the user refreshes the window and even closes and reopens the browser. It was build using **Angular5** and styled with **Bootstrap 4** and some custom CSS.
 
 ## Development server
 
@@ -13,15 +15,3 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
