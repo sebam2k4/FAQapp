@@ -23,10 +23,6 @@ export class QuestionListComponent implements OnInit {
 
   addQuestion(question:Question){
     console.log(question);
-    if (question.text === undefined || question.text === '' ||
-        question.answer === undefined || question.answer === '') {
-    } else {
-      this.dataService.addQuestion(question);
-    }
+    this.dataService.addQuestion(question);
   }
 }

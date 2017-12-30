@@ -19,11 +19,16 @@ export class AddQuestionComponent implements OnInit {
   
   //need EventEmitter
   addQuestion() {
-    this.questionAdded.emit({text:this.text,
-                            answer:this.answer,
-                            hide:true});
-    // remove text from input after adding question/answer
-    this.text = '';
-    this.answer = '';
+    // first check both fields are not empty or undefined
+    if (this.text === undefined || this.text === '' ||
+      this.answer === undefined || this.answer === '') {
+    } else {
+      this.questionAdded.emit({text:this.text,
+                              answer:this.answer,
+                              hide:true});
+      // remove text from input after adding question/answer
+      this.text = '';
+      this.answer = '';
+    };
   }
 }
