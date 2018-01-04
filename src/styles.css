@@ -2,3 +2,6 @@
 body {
   background-color: #edf4fa !important
 }
+.btn {
+  cursor: pointer;
+}
